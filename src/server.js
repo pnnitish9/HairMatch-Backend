@@ -39,7 +39,7 @@ app.use(
         return callback(null, true);
       }
 
-      return callback(null, true); // 🔥 TEMP allow all to debug
+      return callback(new Error("Not allowed by CORS"));
     },
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
